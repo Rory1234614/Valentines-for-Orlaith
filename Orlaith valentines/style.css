@@ -1,0 +1,153 @@
+
+
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.front-text {
+    position: absolute;
+    z-index: 1000;   /* higher than the GIF */
+    color: white;    /* optional but looks good */
+}
+
+
+.gif-crop {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 2; /* lower than the text */
+}
+
+.top-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#gif1 {
+    top: 30%;
+    left: 11%;
+
+}
+
+#gif2 {
+    top: 30%;
+    left: 65%;
+}
+
+
+
+#flowers {
+    position: absolute;
+    top: 30%;
+    left: 34.5%;
+    width: 400px;
+    height: 400px;
+    z-index: 500;
+}
+
+.flowers-img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    z-index: 500;
+}
+
+
+
+
+
+
+
+
+.container {
+    position: absolute;
+    inset: 0;
+    z-index: 0; /* RGB lights layer */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: blur(30px);
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container div{
+    position:absolute;
+    animation: gradient 1.5s infinite;
+    border-radius: 10% 20% 30% 40% 50% 60% 70% 80% / 80% 70% 60% 50% 40% 30% 20% 10%;
+}
+@keyframes gradient{
+     0% {
+    transform: scale(1) translate(0, 0);
+     }
+    50%{
+        transform: scale(1.3)translate(100px, 100px);
+    }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+
+}
+.container div:nth-child(1){
+    height: 100%;
+    width: 100%;
+    background-color: #ff057c;
+}
+.container div:nth-child(2){
+    height: 90%;
+    width: 80%;
+    background-color: #900977;
+    top: -12%;
+    left: -12%;
+    animation-delay: 2s;
+}
+.container div:nth-child(3){
+    height: 60%;
+    width: 90%;
+    background-color: #1215dd;
+    top: -10%;
+    left: -5%;
+    animation-delay: 1s;
+}
+.container div:nth-child(4){
+    height: 70%;
+    width: 85%;
+    background-color: #13d6da;
+    top: -15%;
+    left: -20%;
+    animation-delay: 0.5s;
+}
+.container div:nth-child(5){
+    height: 75%;
+    width: 55%;
+    background-color: #da7313;
+    bottom: 0%;
+    right: 50%;
+    animation-delay: 0.25s;
+}
+.container::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(200px);
+}
+
